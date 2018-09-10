@@ -2,6 +2,8 @@
 /* secuencia de caracteres shebang*/
 /******************/
 /*leer readme*/
-console.log(readReadme());
+console.log("Hola Laboratoria");
 
-
+/*********************
+ * /* Invocando funcion lee archivo md */
+const readReadme = require ('./index.js'); 
