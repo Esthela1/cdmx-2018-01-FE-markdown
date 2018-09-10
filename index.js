@@ -1,4 +1,4 @@
-// funcion para leer el readme
+// funcion leer el readme
 const fs = require('fs');
 const readReadme = (callback) => {
   fs.readFile('./README.md', 'utf8', (err, data)=>{
