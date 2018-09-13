@@ -11,38 +11,72 @@ Crear una herramienta usando Node.js, que lea y analice archivos en formato Mark
 (Hasta abajo esta el check list y lo que debe ir el el planing de github)
 
 ###Lo que debe hacer la libreria
-    Cuando en mi libreria el usuario escriba: 
-            Obtendra este resultado:
 
-     Y la libreria arrojara este resultado así:
+Mi libreria tiene 4 opciones y cada opcion arroja un resultado
 
-**1.- md-links ./some/example.md
+**1.- md-links ./some/example.md (palabraClaveParaInstalar ruta del archivo que quiero leer)
 ./some/example.md http://algo.com/2/3/ Link a algo**
 
-2.- md-links ./some/example.md --validate
+Despues de que el usuario instalo e introdujo los datos solicitados.
+Quiero que mi libreria encuentre la ruta que se le indica.
+despues que lea todas las lineas recorriendolas
+en las lineas busque los links y los nombres de los links recorriendo todo el documento .md
+una vez que encuentre los links y los nombres va a almacenarlos
+despues va a arrojar en consola:
+
+Ruta del archivo obtenida del usuario, el link encontrado y el nombre del link.
+******************************
+**2.- md-links ./some/example.md --validate (palabraClaveParaInstalar ruta del archivo que quiero leer y opcion)
 ./some/example.md http://algo.com/2/3/ ok 200 Link a algo
 
-3.- md-links ./some/example.md --stats
+Despues de que el usuario instalo e introdujo los datos solicitados y la opcion --validate.
+Quiero que mi libreria encuentre la ruta que se le indica.
+despues que lea todas las lineas recorriendolas
+en las lineas busque los links y los nombres de los links recorriendo todo el documento .md
+enviara una solicitud para obtener una respuesta ok 200 o False 404
+una vez que encuentre los links, la respuesta y los nombres va a almacenarlos
+despues va a arrojar en consola:
+
+Ruta del archivo obtenida del usuario, el link encontrado, ok 200/Fail 404 y el nombre del link.
+********************************
+3.- md-links ./some/example.md --stats (palabraClaveParaInstalar ruta del archivo que quiero leer y opcion)
 Total: 3
 Unique: 3
 
-4.-md-links ./some/example.md --stats --validate
+Despues de que el usuario instalo e introdujo los datos solicitados.
+Quiero que mi libreria encuentre la ruta que se le indica.
+despues que lea todas las lineas recorriendolas
+en las lineas busque los links
+y los cuente recorriendo todo el documento .md
+almacene la cantidad de links
+compare los links entre si y verificar si estan repetidos
+y arroje la cantidad de links unicos
+despues va a arrojar en consola:
+
+Cantidad total de links encontrados y links unicos.
+**************************************
+4.-md-links ./some/example.md --stats --validate (palabraClaveParaInstalar ruta del archivo que quiero leer y opcion)
 Total: 3
 Unique: 3
 Broken: 1
 
-
-Quiero que mi libreria encuentre el reame.md
-despues que lea todas las lineas
+Despues de que el usuario instalo e introdujo los datos solicitados.
+Quiero que mi libreria encuentre la ruta que se le indica.
+despues que lea todas las lineas recorriendolas
 en las lineas busque los links
-una vez que encuentre los links va a hacer una solicitud 
-si la solicitud regresa con 200 guarde el resultado 
-si la solicitud regresa con un 400 tambien lo guarde
-despues al haber leido todo el readme
+y los cuente recorriendo todo el documento .md
+almacene la cantidad de links
+compare los links entre si y verificar si estan repetidos
+y arroje la cantidad de links unicos
+enviara una solicitud para obtener una respuesta ok 200 o False 404
+una vez que encuentre los links, la respuesta y los nombres va a almacenarlos
+despues va a arrojar en consola:
 
-     arrojar en consola: link (url), nombre del link(o texto) y resultado () ruta del archivo .md 
+Cantidad total de links encontrados, links unicos y links rotos.
 
-Los tests unitarios deben cubrir un mínimo del 70% de statements, functions, lines y branches. Te recomendamos explorar Jest para tus pruebas unitarias.
+**********************
+
+## Check List
 
 ### General
 
