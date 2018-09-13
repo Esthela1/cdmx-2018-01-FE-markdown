@@ -5,7 +5,7 @@ const readReadme = (callback) => {
     if (err) {
       console.log('Tienes un error');
     } else {
-      link(data);
+      lin k(data);
     }
   });
 };  
